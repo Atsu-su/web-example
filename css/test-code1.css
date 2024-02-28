@@ -1,7 +1,5 @@
-/*!
-reset
-------------------------------
-*/
+/* reset用の記述 */
+
 html {
     color: #000;
     background: #fff;
@@ -179,14 +177,12 @@ repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
 .post {
     width: 100%;
     display: grid;
-    #grid-template-columns: 1fr;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
 }
 
 @media screen and (min-width: 500px) {
     .post {
-        #grid-template-columns: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -198,8 +194,6 @@ repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
     }
 }
 
-/*font-sizeがうまくいかなかった理由を探ること*/
-/*flexにすると子の要素はblockになる*/
 .post-meta {
     display: flex;
     justify-content: space-between;
@@ -208,8 +202,6 @@ repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
     margin: 16px 0;
 }
 
-/*十分大きいpxを指定すると角丸になるので、100vh*/
-/*line-height 1がないと1.8のbodyの値を引き継ぐ*/
 .post-category {
     display: inline-block;
     padding: 6px 16px;
@@ -229,12 +221,4 @@ repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 30px;
-}
-
-.post-title::before {
-
-}
-
-.post-title::after {
-
 }
