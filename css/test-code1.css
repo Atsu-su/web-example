@@ -1,4 +1,4 @@
-/* reset用の記述 */
+/* reset */
 
 html {
     color: #000;
@@ -126,10 +126,8 @@ main {
     box-sizing: border-box;
 }
 
-/*!
-base
-------------------------------
-*/
+/* base */
+
 body {
     line-height: 1.8;
     font-size: 14px;
@@ -154,26 +152,15 @@ img {
     vertical-align: bottom;
 }
 
-/*!
-mixin
-------------------------------
-*/
-/*!
-top
-------------------------------
-*/
+/* top */
 
 .container {
     padding: 80px 0;
     width: 90%;
     margin: 0 auto;
-    max-width: 960px;   
+    max-width: 960px;
 }
 
-/*
-repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
-その長さを引数に与えているだけ」
-*/
 .post {
     width: 100%;
     display: grid;
@@ -192,6 +179,19 @@ repeat(1, 1fr)はrepeat関数を使って「繰り返す数と
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+.post-thumbnail-image {
+    padding-top: 50%;
+    position: relative;
+}
+
+.post-thumbnail-image img {
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .post-meta {
